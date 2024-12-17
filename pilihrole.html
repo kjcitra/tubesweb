@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Role - Hijab Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white; /* Warna teks */
+            position: relative; /* Posisi relatif untuk overlay */
+            overflow: hidden; /* Menghindari scrollbar */
+        }
+        .background {
+            background-image: url('images/background.jpg'); /* Tambahkan gambar latar belakang */
+            background-size: cover; /* Menyesuaikan gambar dengan ukuran jendela */
+            background-position: center; /* Memusatkan gambar */
+            position: absolute; /* Posisi absolut untuk gambar latar */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1; /* Menempatkan gambar di belakang overlay */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Hitam dengan transparansi */
+            z-index: 2; /* Menempatkan overlay di depan gambar */
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #a3993a;
+            z-index: 3; /* Menempatkan teks di atas overlay */
+            position: relative; /* Posisi relatif untuk teks */
+        }
+        .role-button {
+    background-color: #b7b071;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    z-index: 3; /* Menempatkan tombol di atas overlay */
+    position: relative; /* Posisi relatif untuk tombol */
+    width: 200px; /* Atur lebar tombol sesuai kebutuhan */
+    max-width: 90%; /* Menjaga tombol responsif dan tidak lebih lebar dari 90% dari kontainer */
+}
+        .role-button:hover {
+            background-color: #c4bb8b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background"></div>
+<div class="overlay"></div>
+
+<h1>Pilih Role Anda</h1>
+<a href="loginadmin.php?role=admin"><button class="role-button">Admin</button></a>
+<a href="userlogin.php"><button class="role-button">User</button></a>
+
+</body>
+</html>
